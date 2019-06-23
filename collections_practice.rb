@@ -85,16 +85,21 @@ end
 #
 #
 #
-def organize_schools 
+def organize_schools(arr)
+  newHas= {}
+  arr.each do |name, location|
+    newArr= []
+    checkLoco = location[:location]
+    location.each do |item, loco|
+      if checkLoco ==loco 
+        newArr << name
+      end
+      newHas[loco]= newArr
+    end
+  end
+  newHas
 end 
 
-#
-#
-#
-def merge_data ()
-  
-end
-#
 #
 #
 #
