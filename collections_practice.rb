@@ -53,14 +53,14 @@ end
 #
 def merge_data (key, data)
    final = []
-  keys.each do |item|
+  key.each do |item|
     
     nameKey = item[:first_name]
     
     data.each do |ele|
     
-      ele.each do |key, value|
-        if nameKey == key 
+      ele.each do |info, value|
+        if nameKey == info 
           finalHas = {item.key(nameKey) => nameKey}
           final << finalHas.merge(value)
       end
