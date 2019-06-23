@@ -80,7 +80,7 @@ def find_cool (arr)
       end
     end
   end 
-end
+
 #
 #
 #
