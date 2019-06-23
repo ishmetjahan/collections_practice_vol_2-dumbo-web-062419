@@ -73,13 +73,14 @@ end
 #
 #
 def find_cool (arr)
+  newArr= []
  arr.each do |i|
-    i.each do |key, val|
-      if info[key] == "cool"
-        return i
+    temp= i[:temperature]
+    if temp == "cool"
+    newArr.push(i)
       end
     end
-  end 
+  newArr
 end
 #
 #
