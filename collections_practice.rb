@@ -53,17 +53,20 @@ end
 #
 def merge_data (key, data)
    final = []
-  #iteratre first array
-  keys.each do |key|
-    #iterate second array
-    data.each do |datum, v|
-      #datum["blake"].each do |k, v|
-      datum[key[:first_name]].each do |key, value|
-        final << key
+  keys.each do |item|
+    
+    nameKey = item[:first_name]
+    
+    data.each do |ele|
+    
+      ele.each do |key, value|
+        if nameKey == key 
+          finalHas = {item.key(nameKey) => nameKey}
+          final << finalHas.merge(value)
+      
       end
     end
   end
-
   final
 end
 #
