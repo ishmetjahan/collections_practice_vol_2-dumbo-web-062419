@@ -63,7 +63,7 @@ def merge_data (key, data)
         if nameKey == key 
           finalHas = {item.key(nameKey) => nameKey}
           final << finalHas.merge(value)
-      
+      end
       end
     end
   end
@@ -80,7 +80,7 @@ def find_cool (arr)
       end
     end
   end 
-
+end
 #
 #
 #
