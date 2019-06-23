@@ -61,7 +61,7 @@ def merge_data (key, data)
     puts ele
       ele.each do |info, value|
         if nameKey == info 
-          finalHas = {item.key(nameKey) => nameKey}
+          finalHas = {item.keys(nameKey) => nameKey}
           final << finalHas.merge(value)
       end
       end
